@@ -40,8 +40,8 @@ if [[ $input == "Y" || $input == "y" ]];
       sudo echo "# deb-src https://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
       sudo echo "" | sudo tee -a /etc/apt/sources.list
       sudo echo "# Mirror Links" | sudo tee -a /etc/apt/sources.list
-      sudo echo "deb https://mirror.karneval.cz/pub/linux/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
-      sudo echo "deb https://mirror.serverion.com/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
+      sudo echo "deb https://mirror.karneval.cz/pub/linux/kali/ kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
+      sudo echo "deb-src https://mirror.karneval.cz/pub/linux/kali/ kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
     echo -e "\n${BLUE}╔═════{ Updating Your Host:${XX}"
       apt-get update -y && apt-get upgrade -y && apt-get autoremove -y && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get full-upgrade -y && apt-get autoremove -y && apt-get clean -y
   else
