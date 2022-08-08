@@ -40,8 +40,10 @@ if [[ $input == "Y" || $input == "y" ]];
       sudo echo "# deb-src https://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
       sudo echo "" | sudo tee -a /etc/apt/sources.list
       sudo echo "# Mirror Links" | sudo tee -a /etc/apt/sources.list
-      sudo echo "deb https://ftp.nluug.nl/os/Linux/distr/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
-      sudo echo "deb-src https://ftp.acc.umu.se/mirror/kali.org/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
+      sudo echo "deb https://mirror.netcologne.de/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
+      sudo echo "deb https://archive-4.kali.org/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
+      sudo echo "deb https://mirrors.ocf.berkeley.edu/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
+      sudo echo "deb https://wlglam.fsmg.org.nz/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
     echo -e "\n${BLUE}╔═════{ Adding Alias 'updateme' to /etc/zsh/zshrc :${XX}"
       sudo echo "alias updateme='apt-get update -y && apt-get upgrade -y && apt-get autoremove && apt-get dist-upgrade -y && apt-get autoremove && apt-get full-upgrade -y && apt-get autoremove && apt-get clean'" | sudo tee -a /etc/zsh/zshrc
       echo -e "\n"
