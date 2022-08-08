@@ -40,10 +40,10 @@ if [[ $input == "Y" || $input == "y" ]];
       sudo echo "# deb-src https://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
       sudo echo "" | sudo tee -a /etc/apt/sources.list
       sudo echo "# Mirror Links" | sudo tee -a /etc/apt/sources.list
-      sudo echo "deb https://mirror.karneval.cz/pub/linux/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
+      sudo echo "deb https://mirror.netcologne.de/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
       sudo echo "deb https://mirror.serverion.com/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
     echo -e "\n${BLUE}╔═════{ Adding Alias 'updateme' to /etc/zsh/zshrc :${XX}"
-      sudo echo "alias updateme='apt-get update -y && apt-get upgrade -y &&  apt-get autoremove &&  apt-get dist-upgrade -y &&  apt-get autoremove && apt-get full-upgrade -y && apt-get autoremove && apt-get clean'" | sudo tee -a /etc/zsh/zshrc
+      sudo echo "alias updateme='apt-get update -y && apt-get upgrade -y && apt-get autoremove && apt-get dist-upgrade -y && apt-get autoremove && apt-get full-upgrade -y && apt-get autoremove && apt-get clean'" | sudo tee -a /etc/zsh/zshrc
       echo -e "\n"
       echo -e "${RED}All you have to do is open a new terminal and type updateme to update your host :)${XX}"
     echo -e "\n${BLUE}╔═════{ Updating Your Host:${XX}"
