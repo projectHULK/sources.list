@@ -41,8 +41,6 @@ if [[ $input == "Y" || $input == "y" ]];
       sudo echo "" | sudo tee -a /etc/apt/sources.list
       sudo echo "# Mirror Links" | sudo tee -a /etc/apt/sources.list
       sudo echo "deb https://mirror.karneval.cz/pub/linux/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
-      sudo echo "deb https://mirror.serverion.com/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
-      sudo echo "deb https://mirror.pyratelan.org/kali/ kali-rolling main contrib non-free" | sudo tee -a /etc/apt/sources.list
     echo -e "\n${BLUE}╔═════{ Adding Alias 'updateme' to /etc/zsh/zshrc :${XX}"
       sudo echo "alias updateme='apt-get update -y && apt-get upgrade -y && apt-get autoremove && apt-get dist-upgrade -y && apt-get autoremove && apt-get full-upgrade -y && apt-get autoremove && apt-get clean'" | sudo tee -a /etc/zsh/zshrc
       echo -e "\n"
